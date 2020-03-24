@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title> India Lockdown Progress</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<h2> India Lockdown Progress Tracker Due to Covid-19 </h2>
+<div class="progress" style="height:50px">
+  <div class="progress-bar progress-bar-strip bg-success" id ="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+</div>
+<h2> Stay at home India. This too shall pass !</h2>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+	var lockdownStartDate = new Date().getTime();
+    var lockdownEndDate = new Date("Apr 15, 2020, 00:00:00").getTime();
+	var remainingDays = Math.floor((lockdownEndDate - lockdownStartDate)/(1000*60*60*24));
+	var currentDay = Math.floor(21 - remainingDays);
+	var progressPercentage = remainingDays/21;
+	
+	console.log(document.getElementById('progress-bar'))
+	document.getElementById('progress-bar').style.width = ""+progressPercentage+"%";
+	document.getElementById('progress-bar').innerHTML = ""+currentDay+"/21"
+
+</script>
+</body>
+<footer>Github - <a href="https://github.com/ankitmahapatra22/india-lockdown-tracker" target="_blank">Repo</footer>
+</html>
