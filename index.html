@@ -7,6 +7,12 @@
 <title> India Lockdown Progress</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <style>
+body{
+	margin-top : 15%;
+}
+h2{
+text-align : center;
+}
 footer {
   position: fixed;
   left: 0;
@@ -32,7 +38,7 @@ footer {
     var lockdownEndDate = new Date("Apr 15, 2020, 00:00:00").getTime();
 	var remainingDays = Math.floor((lockdownEndDate - lockdownStartDate)/(1000*60*60*24));
 	var currentDay = Math.floor(21 - remainingDays);
-	var progressPercentage = remainingDays/21;
+	var progressPercentage = currentDay*100/21;
 	
 	console.log(document.getElementById('progress-bar'))
 	document.getElementById('progress-bar').style.width = ""+progressPercentage+"%";
