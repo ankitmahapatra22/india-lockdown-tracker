@@ -35,7 +35,7 @@ footer {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
 	var lockdownStartDate = new Date().getTime();
-    var lockdownEndDate = new Date("Apr 15, 2020, 00:00:00").getTime();
+    	var lockdownEndDate = new Date("May 3, 2020, 00:00:00").getTime();
 	var remainingDays = Math.floor((lockdownEndDate - lockdownStartDate)/(1000*60*60*24));
 	var currentDay = Math.floor(21 - remainingDays);
 	var progressPercentage = currentDay*100/21;
