@@ -35,14 +35,14 @@ footer {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
 	var currentDate = new Date().getTime();
-    	var lockdownEndDate = new Date("May 31, 2020, 00:00:00").getTime();
+    	var lockdownEndDate = new Date("June 31, 2020, 00:00:00").getTime();
 	var remainingDays = Math.floor((lockdownEndDate - currentDate)/(1000*60*60*24));
-	var currentDay = Math.floor(67 - remainingDays);
-	var progressPercentage = currentDay*100/67;
+	var currentDay = Math.floor(98 - remainingDays);
+	var progressPercentage = currentDay*100/98;
 	
 	console.log(document.getElementById('progress-bar'))
 	document.getElementById('progress-bar').style.width = ""+progressPercentage+"%";
-	document.getElementById('progress-bar').innerHTML = ""+currentDay+"/67"
+	document.getElementById('progress-bar').innerHTML = ""+currentDay+"/98"
 
 </script>
 </body>
